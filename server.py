@@ -5,6 +5,7 @@ from ultralytics import YOLO
 from PIL import Image
 import io
 import gdown
+import uvicorn
 
 output_path = "final_epochs-60-yolov11x.pt"
 url = f"https://drive.google.com/uc?id={'19KazqWcoAeTS48tmLF12orW51sqzOOSI'}"
@@ -45,3 +46,6 @@ async def predict(file: UploadFile = File(...)):
 @app.get("/")
 async def home():
     return {"message": "Welcome to YOLO Inference API"}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=5000)
