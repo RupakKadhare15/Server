@@ -8,7 +8,7 @@ import io
 app = FastAPI()
 
 # Load YOLO model
-model = YOLO("https://github.com/RupakKadhare15/Server/releases/best_v11-60epochs.pt")  # Replace with your custom model path if needed
+model = YOLO("best_v11-60epochs.pt")  # Replace with your custom model path if needed
 
 # Add CORS middleware
 app.add_middleware(
