@@ -8,7 +8,7 @@ import io
 app = FastAPI()
 
 # Load YOLO model
-model = YOLO("/releases/tag/weight/best_v11-60epochs.pt")  # Replace with your custom model path if needed
+model = YOLO("https://drive.google.com/file/d/1nnXc4k6yPUEurM3LTuJXst193TXnMbNW/view?usp=share_link")  # Replace with your custom model path if needed
 
 # Add CORS middleware
 app.add_middleware(
