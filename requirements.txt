@@ -1,5 +1,5 @@
 fastapi[standard]
 ultralytics
 Pillow
-IO
+io
 
