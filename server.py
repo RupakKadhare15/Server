@@ -7,7 +7,7 @@ import io
 import gdown
 
 output_path = "final_epochs-60-yolov11x.pt"
-url = f"https://drive.google.com/uc?id={''19KazqWcoAeTS48tmLF12orW51sqzOOSI''}"
+url = f"https://drive.google.com/uc?id={'19KazqWcoAeTS48tmLF12orW51sqzOOSI'}"
 gdown.download(url, output_path, quiet=False)
 
 app = FastAPI()
