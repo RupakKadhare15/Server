@@ -4,11 +4,17 @@ from fastapi.responses import JSONResponse
 from ultralytics import YOLO
 from PIL import Image
 import io
+import gdown
+
+output_path = "final_epochs-60-yolov11x.pt"
+url = f"https://drive.google.com/uc?id={'1Mm8bqVOCpYUMpuv8gHx4pejHPKNVoYkP'}"
+gdown.download(url, output_path, quiet=False)
 
 app = FastAPI()
 
 # Load YOLO model
-model = YOLO("./final_epochs-60-yolov11x.pt")  # Replace with your custom model path if needed
+# model1 = YOLO("https://drive.google.com/file/d/1nnXc4k6yPUEurM3LTuJXst193TXnMbNW/view?usp=drive_link")  # Replace with your custom model path if needed
+model = YOLO("./final_epochs-60-yolov11x.pt")
 
 # Add CORS middleware
 app.add_middleware(
